@@ -1,42 +1,9 @@
 {
-  "FacturaVF": {
+  "FacturaSIF": {
     "FileHeader": {
       "SchemaVersion": "1.0",
       "Modality": "I",
-      "InvoiceIssuerType": "TE",
-      "ThirdParty": {
-        "TaxIdentification": {
-          "PersonTypeCode": "J",
-          "ResidenceTypeCode": "R",
-          "TaxIdentificationNumber": "T12345678"
-        },
-        "LegalEntity": {
-          "CorporateName": "Third Party",
-          "RegistrationData": {
-            "Book": "14829/2001-12-26",
-            "RegisterOfCompaniesLocation": "Madrid",
-            "Sheet": "44",
-            "Folio": "343",
-            "Section": "3a",
-            "Volume": "5895",
-            "additionalRegistrationData": ""
-          },
-          "AddressInSpain": {
-            "Address": "Calle Third Party",
-            "PostCode": "12345",
-            "Town": "Ciudad Third Party",
-            "Province": "Provincia TP",
-            "CountryCode": "ESP"
-          },
-          "ContactDetails": {
-            "Telephone": "+34 12345678",
-            "TeleFax": "+34 12345678",
-            "WebAddress": "http://www.ThirdParty.com/",
-            "ElectronicMail": "electronicMail@thirdparty.com",
-            "ContactPersons": "Contacto Third Party"
-          }
-        }
-      }
+      "InvoiceIssuerType": "D"
     },
     "Invoices": [
       {
@@ -48,18 +15,6 @@
               "TaxIdentificationNumber": "S12345678"
             },
             "PartyIdentification": "S12345678",
-            "AdministrativeCentre": {
-              "CentreCode": "S12345678",
-              "RoleTypeCode": "01",
-              "AddressInSpain": {
-                "Address": "Calle del Centro Seller",
-                "PostCode": "12345",
-                "Town": "Ciudad Centro Seller",
-                "Province": "Provincia ACS",
-                "CountryCode": "ESP"
-              },
-              "CentreDescription": "Centro Seller Party"
-            },
             "LegalEntity": {
               "CorporateName": "Seller Party",
               "TradeName": "Seller Party",
@@ -72,19 +27,19 @@
                 "Volume": "5895",
                 "AdditionalRegistrationData": ""
               },
-              "AddressInSpain": {
-                "Address": "Calle Seller Party",
+              "Address": {
+                "Address1": "Calle Seller Party",
+                "Address2": "Apartamento 1",
                 "PostCode": "12345",
                 "Town": "Ciudad Seller Party",
                 "Province": "Provincia SP",
-                "CountryCode": "ESP"
+                "CountryCode": "ES"
               },
               "ContactDetails": {
                 "Telephone": "+34 12345678",
-                "TeleFax": "+34 12345678",
-                "WebAddress": "http://www.SellerParty.com/",
                 "ElectronicMail": "electronicMail@sellerparty.com",
-                "ContactPersons": "Contacto Seller Party"
+                "LastName": "Nombre Seller Party",
+                "FirstName": "Apellidos Seller Party"
               }
             }
           },
@@ -92,36 +47,34 @@
             "TaxIdentification": {
               "PersonTypeCode": "J",
               "ResidenceTypeCode": "R",
-              "TaxIdentificationNumber": "B12345678"
+              "TaxIdentificationNumber": "S12345678"
             },
-            "PartyIdentification": "B12345678",
-            "AdministrativeCentre": {
-              "CentreCode": "B12345678",
-              "RoleTypeCode": "01",
-              "AddressInSpain": {
-                "Address": "Calle del Centro Buyer",
-                "PostCode": "12345",
-                "Town": "Ciudad Centro Buyer",
-                "Province": "Provincia ACB",
-                "CountryCode": "ESP"
-              },
-              "CentreDescription": "Centro Buyer Party"
-            },
+            "PartyIdentification": "S12345678",
             "LegalEntity": {
               "CorporateName": "Buyer Party",
-              "AddressInSpain": {
-                "Address": "Calle Buyer Party",
+              "TradeName": "Buyer Party",
+              "RegistrationData": {
+                "Book": "14829/2001-12-26",
+                "RegisterOfCompaniesLocation": "Madrid",
+                "Sheet": "44",
+                "Folio": "343",
+                "Section": "3a",
+                "Volume": "5895",
+                "AdditionalRegistrationData": ""
+              },
+              "Address": {
+                "Address1": "Calle Buyer Party",
+                "Address2": "Apartamento 1",
                 "PostCode": "12345",
                 "Town": "Ciudad Buyer Party",
-                "Province": "Provincia BP",
+                "Province": "Provincia SP",
                 "CountryCode": "ESP"
               },
               "ContactDetails": {
                 "Telephone": "+34 12345678",
-                "TeleFax": "+34 12345678",
-                "WebAddress": "http://www.BuyerParty.com/",
-                "ElectronicMail": "electronicMail@buyerparty.com",
-                "ContactPersons": "Contacto Buyer Party"
+                "ElectronicMail": "electronicMail@sellerparty.com",
+                "LastName": "Nombre Buyer Party",
+                "FirstName": "Apellidos Buyer Party"
               }
             }
           },
@@ -148,23 +101,23 @@
             "InvoiceDescription": "Description",
             "PreviousInvoiceNumber": "INV00000001",
             "Corrective": {
-              "InvoiceNumber": "INV00000001",
-              "ReasonCode": "12",
-              "ReasonDescription": "Número de la factura",
-              "TaxPeriod": {
-                "StartDate": "2024-10-03T23:12:03+01:00",
-                "EndDate": "2024-10-03T23:12:03+01:00"
+              "InvoiceNumber": "INV00000002",
+              "InvoiceIssueDate":"2024-10-03", 
+              "Subsanation":"S", 
+              "PreviousRejection":"N", 
+              "ReasonCode": "S",
+              "ReasonDescription": "TOTAL TASAS ERRORNEO",
+              "CorrectiveAmounts": {
+                "TaxAmount": 210.00
               },
-              "CorrectionMethod": "01",
-              "CorrectionMethodDescription": "01",
-              "InvoiceIssueDate": "2024-10-03T23:12:03+01:00"
+              "OperationDate": "2024-10-03T23:12:03+01:00"
             }
           },
           "InvoiceIssueData": {
             "IssueDate": "2024-10-03T23:12:03+01:00",
             "InvoicingPeriod": {
-              "StartDate": "2024-10-03T23:12:03+01:00",
-              "EndDate": "2024-11-03T23:12:03+01:00"
+              "StartDate": "2024-10-03",
+              "EndDate": "2024-11-03"
             },
             "InvoiceCurrencyCode": "EUR",
             "TaxCurrencyCode": "EUR",
@@ -184,12 +137,12 @@
             }
           ],
           "InvoiceTotals": {
-            "TotalGrossAmount": 7257.5,
+            "TotalGrossAmount": 7257.50,
             "GeneralDiscounts": [
               {
                 "Discount": {
                   "DiscountReason": "Descuento General",
-                  "DiscountRate": 10.0,
+                  "DiscountRate": 10.00,
                   "DiscountAmount": 725.25
                 }
               }
@@ -198,16 +151,16 @@
               {
                 "Charge": {
                   "ChargeReason": "Cargo General",
-                  "ChargeRate": 20.0,
-                  "ChargeAmount": 1451.5
+                  "ChargeRate": 20.00,
+                  "ChargeAmount": 1451.50
                 }
               }
             ],
             "TotalGeneralDiscounts": 725.25,
             "TotalGeneralSurcharges": 1451.5,
-            "TotalGrossAmountBeforeTaxes": 5750.0,
-            "TotalTaxOutputs": 1207.5,
-            "TotalTaxesWithheld": 0.0,
+            "TotalGrossAmountBeforeTaxes": 5750.00,
+            "TotalTaxOutputs": 1207.50,
+            "TotalTaxesWithheld": 0.00,
             "InvoiceTotal": 7983.25,
             "TotalOutstandingAmount": 7983.25,
             "TotalExecutableAmount": 7983.25
@@ -298,9 +251,6 @@
               }
             }
           ],
-          "LegalLiterals": {
-            "LegalReference": "Lorem Ipsum"
-          },
           "AdditionalData": {
             "RelatedDocuments": [
               {
